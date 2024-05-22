@@ -5,17 +5,16 @@ import {
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.config";
-import { useEffect } from "react";
 
 const Login = () => {
   const navigate = useNavigate();
 
   // firebase-hook
-  const [userInfo] = useAuthState(auth);
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [user] = useAuthState(auth);
+  const [signInWithEmailAndPassword, user2, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
-  console.log(user, loading, error);
+  console.log(user, loading, error, user2);
 
   const handlelogin = (e) => {
     e.preventDefault();
@@ -27,11 +26,10 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
 
-  useEffect(() => {
-    if (userInfo) {
-      navigate("/");
-    }
-  }, [navigate, userInfo]);
+  if(user){
+    navigate("/");
+  }
+
 
   return (
     <div
