@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from "../firebase/firebase.config";
 
 
 const Login = () => {
+
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    console.log(user, loading, error)
     return (
         <div className="h-[720px] flex justify-center pt-20" style={{backgroundImage: 'url(https://i.ibb.co/8NcsR50/tasty-recipes-cover.png)'}}>
             <div>
@@ -21,7 +26,7 @@ const Login = () => {
         <div className="divider divider-error text-white">or</div>
         <p className="text-white text-center">Login with</p>
       </form>
-        <button className="btn btn-outline btn-error w-full mt-5 mb-2">Google</button>
+        <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-error w-full mt-5 mb-2">Google</button>
         <button className="btn border-white text-white btn-outline hover:bg-white hover:text-neutral w-full">Github</button>
             </div>
         </div>

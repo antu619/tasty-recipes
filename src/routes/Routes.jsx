@@ -7,6 +7,7 @@ import Contact from "../pages/Contact";
 import About from "../pages/About";
 import Blogs from "../pages/Blogs";
 import Register from "../pages/Register";
+import DashboardLayout from "../layouts/DashboardLayout";
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
                 element: <Blogs/>
             }
         ]
+    },
+    {
+        path: '/dashboard',
+        element: <DashboardLayout/>
     }
 ])
 
