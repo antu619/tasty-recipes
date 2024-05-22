@@ -1,7 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import GoogleGithubLogin from "../components/GoogleGithubLogin";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../firebase/firebase.config";
+import { useEffect } from "react";
 
 
 const Register = () => {
+
+    const navigate = useNavigate()
+
+    // firebase-hook
+    const [user] = useAuthState(auth);
+
+    useEffect( () => {
+        if(user){
+            navigate('/')
+        }
+    }, [navigate, user])
+
     return (
         <div className="h-[720px] flex justify-center pt-20" style={{backgroundImage: 'url(https://i.ibb.co/8NcsR50/tasty-recipes-cover.png)'}}>
             <div>
@@ -22,6 +38,8 @@ const Register = () => {
         </div>
         <p className="text-white text-center mt-4">Already have an account? <Link className="text-error" to='/login'>login?</Link></p>
       </form>
+      {/* Google Github Login */}
+      <GoogleGithubLogin/>
             </div>
         </div>
     );

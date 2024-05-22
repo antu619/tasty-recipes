@@ -1,12 +1,23 @@
-import { Link } from "react-router-dom";
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from "react-router-dom";
+import GoogleGithubLogin from "../components/GoogleGithubLogin";
+import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.config";
+import { useEffect } from "react";
 
 
 const Login = () => {
 
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    console.log(user, loading, error)
+    const navigate = useNavigate()
+
+    // firebase-hook
+    const [user] = useAuthState(auth);
+
+    useEffect( () => {
+        if(user){
+            navigate('/')
+        }
+    }, [navigate, user])
+
     return (
         <div className="h-[720px] flex justify-center pt-20" style={{backgroundImage: 'url(https://i.ibb.co/8NcsR50/tasty-recipes-cover.png)'}}>
             <div>
@@ -23,11 +34,9 @@ const Login = () => {
           <button className="btn border-white text-white btn-outline hover:bg-white hover:text-neutral">Login</button>
         </div>
         <p className="text-white mt-1">Want to <Link className="text-error" to='/register'>register?</Link></p>
-        <div className="divider divider-error text-white">or</div>
-        <p className="text-white text-center">Login with</p>
       </form>
-        <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-error w-full mt-5 mb-2">Google</button>
-        <button className="btn border-white text-white btn-outline hover:bg-white hover:text-neutral w-full">Github</button>
+      {/* Login With Google and Github */}
+      <GoogleGithubLogin/>
             </div>
         </div>
     );

@@ -24,9 +24,14 @@ console.log(user )
       <li>
         <NavLink to="/blogs">Blogs</NavLink>
       </li>
-      <li>
+      {
+        user?. email ?
+        <li>
         <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
+      :
+      <div></div>
+      }
     </>
   );
 
@@ -65,7 +70,7 @@ console.log(user )
         <ul className="menu menu-horizontal px-1 gap-1">{menu}</ul>
       </div>
       <div className="navbar-end">
-        {user ? (
+        {user?. email ? (
           <div className="flex items-center gap-2">
               <img className="w-12 border-2 rounded-full" src={user.photoURL} />
           <button onClick={() => signOut()} className="btn btn-neutral w-28">Log Out</button>
