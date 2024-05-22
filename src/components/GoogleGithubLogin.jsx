@@ -6,11 +6,10 @@ const GoogleGithubLogin = () => {
 
     // firebase-hook
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-
-    console.log(user, loading, error)
-
+    console.log( user, loading, error)
     return (
         <div>
+            <p className="text-error">{error?.message}</p>
             <div className="divider divider-error text-white">or</div>
         <p className="text-white text-center">Login with</p>
         <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-error w-full mt-5 mb-2">Google</button>

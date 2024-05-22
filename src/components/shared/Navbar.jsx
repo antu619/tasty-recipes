@@ -6,7 +6,7 @@ const Navbar = () => {
   // firebase-hook
   const [user] = useAuthState(auth);
   const [signOut] = useSignOut(auth);
-console.log(user )
+  console.log(user);
   const menu = (
     <>
       <li>
@@ -24,14 +24,13 @@ console.log(user )
       <li>
         <NavLink to="/blogs">Blogs</NavLink>
       </li>
-      {
-        user?. email ?
+      {user?.email ? (
         <li>
-        <NavLink to="/dashboard">Dashboard</NavLink>
-      </li>
-      :
-      <div></div>
-      }
+          <NavLink to="/dashboard">Dashboard</NavLink>
+        </li>
+      ) : (
+        <div></div>
+      )}
     </>
   );
 
@@ -70,12 +69,21 @@ console.log(user )
         <ul className="menu menu-horizontal px-1 gap-1">{menu}</ul>
       </div>
       <div className="navbar-end">
-        {user?. email ? (
+        {user?.email ? (
           <div className="flex items-center gap-2">
+            {user.photoURL ? (
               <img className="w-12 border-2 rounded-full" src={user.photoURL} />
-          <button onClick={() => signOut()} className="btn btn-neutral w-28">Log Out</button>
+            ) : (
+              <div className="avatar placeholder">
+              <div className="bg-neutral text-neutral-content border-2 rounded-full w-12">
+                <span>{user.email.slice(0,5)}</span>
+              </div>
+            </div> 
+            )}
+            <button onClick={() => signOut()} className="btn btn-neutral w-28">
+              Log Out
+            </button>
           </div>
-
         ) : (
           <Link to="/login" className="btn btn-neutral w-28">
             Login
