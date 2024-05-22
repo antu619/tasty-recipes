@@ -15,7 +15,6 @@ const Home = () => {
             <SeeFoods/>
             {/* Subscribe */}
             <Subscribe/>
-            Home Sweet Home
         </div>
     );
 };

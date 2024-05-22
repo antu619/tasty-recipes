@@ -2,7 +2,7 @@
 
 const Subscribe = () => {
     return (
-        <div className="flex justify-evenly items-center bg-base-200 mx-20 mt-16 py-3">
+        <div className="flex justify-evenly items-center bg-base-200 mx-20 my-16 py-3">
             <p>Subscribe to get my secret recipes</p>
             <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
             <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
