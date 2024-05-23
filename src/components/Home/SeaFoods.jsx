@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Food from "./Food";
 
 
-const SeeFoods = () => {
+const SeaFoods = () => {
 
     const [foods, setFoods] = useState([]);
 
@@ -14,7 +14,7 @@ const SeeFoods = () => {
 
     return (
         <div className="mt-16">
-           <h2 className="text-3xl text-center font-semibold mb-16">Our See Foods</h2>
+           <h2 className="text-3xl text-center font-semibold mb-16">Our Sea Foods</h2>
            <div className="grid lg:grid-cols-3 gap-5 lg:px-20 px-5">
             {
                 foods?.meals?.slice(0,6).map(food => <Food key={food.idMeal} food={food} />)
@@ -24,4 +24,4 @@ const SeeFoods = () => {
     );
 };
 
-export default SeeFoods;
+export default SeaFoods;

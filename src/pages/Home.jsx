@@ -1,6 +1,6 @@
 import Banner from "../components/Home/Banner";
 import FoodCategories from "../components/Home/FoodCategories";
-import SeeFoods from "../components/Home/SeeFoods";
+import SeaFoods from "../components/Home/SeaFoods";
 import Subscribe from "../components/Home/Subscribe";
 
 
@@ -12,7 +12,7 @@ const Home = () => {
             {/* Food Categories */}
             <FoodCategories/>
             {/* See Foods */}
-            <SeeFoods/>
+            <SeaFoods/>
             {/* Subscribe */}
             <Subscribe/>
         </div>
