@@ -35,7 +35,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-[#eb5757] text-white px-20">
+    <div className="navbar bg-[#eb5757] text-white lg:px-20 md:px-10 px-2">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -61,7 +61,7 @@ const Navbar = () => {
             {menu}
           </ul>
         </div>
-        <Link to="/" className="text-3xl text-white">
+        <Link to="/" className="lg:text-3xl md:text-3xl text-xl text-white">
           tasty<span className="font-bold">Recipes</span>
         </Link>
       </div>

@@ -15,7 +15,7 @@ const FoodCategories = () => {
     return (
         <div className="mt-16">
            <h2 className="text-3xl text-center font-semibold mb-16">Our Food Categories</h2>
-           <div className="grid lg:grid-cols-3 gap-5 px-20">
+           <div className="grid lg:grid-cols-3 gap-5 lg:px-20 px-5">
             {
                 categories?.categories?.slice(1,7).map(category => <Category key={category.idCategory} category={category} />)
             }

@@ -15,7 +15,7 @@ const SeeFoods = () => {
     return (
         <div className="mt-16">
            <h2 className="text-3xl text-center font-semibold mb-16">Our See Foods</h2>
-           <div className="grid lg:grid-cols-3 gap-5 px-20">
+           <div className="grid lg:grid-cols-3 gap-5 lg:px-20 px-5">
             {
                 foods?.meals?.slice(0,6).map(food => <Food key={food.idMeal} food={food} />)
             }
