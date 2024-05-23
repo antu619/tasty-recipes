@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCHn_s5XAfL71LUcYY-lrCmDx7J79qTa0w",
-  authDomain: "tasty-recipes-b8ce6.firebaseapp.com",
-  projectId: "tasty-recipes-b8ce6",
-  storageBucket: "tasty-recipes-b8ce6.appspot.com",
-  messagingSenderId: "921234631734",
-  appId: "1:921234631734:web:f70a5c5cf61d639def7c97"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 const app = initializeApp(firebaseConfig);
