@@ -25,7 +25,7 @@ Recently, I explored `react-firebase-hooks` and created a project named "Tasty R
 
 - ## Links
 
-[Live](https://land-times.web.app/) Link
+[Live](https://tasty-recipes-b8ce6.web.app/) Link
 
 
 ## Contact
