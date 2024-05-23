@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleGithubLogin from "../components/GoogleGithubLogin";
 import {
   useAuthState,
@@ -7,6 +7,8 @@ import {
 import auth from "../firebase/firebase.config";
 
 const Login = () => {
+  const location = useLocation();
+  console.log(location)
   const navigate = useNavigate();
 
   // firebase-hook
@@ -24,12 +26,12 @@ const Login = () => {
     const password = form.password.value;
     console.log(email, password);
     signInWithEmailAndPassword(email, password);
+    
   };
 
   if(user){
-    navigate("/");
+    navigate(location?.state ? location.state : "/")
   }
-
 
   return (
     <div

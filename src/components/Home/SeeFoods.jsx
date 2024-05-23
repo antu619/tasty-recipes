@@ -12,8 +12,6 @@ const SeeFoods = () => {
         .then(data => setFoods(data))
     }, [])
 
-    console.log(foods.meals)
-
     return (
         <div className="mt-16">
            <h2 className="text-3xl text-center font-semibold mb-16">Our See Foods</h2>

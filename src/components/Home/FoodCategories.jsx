@@ -12,8 +12,6 @@ const FoodCategories = () => {
         .then(data => setCategories(data))
     }, [])
 
-    console.log(categories.categories)
-
     return (
         <div className="mt-16">
            <h2 className="text-3xl text-center font-semibold mb-16">Our Food Categories</h2>
