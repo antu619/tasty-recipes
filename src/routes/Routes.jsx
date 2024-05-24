@@ -9,6 +9,7 @@ import Blogs from "../pages/Blogs";
 import Register from "../pages/Register";
 import DashboardLayout from "../layouts/DashboardLayout";
 import PrivateRoutes from "./PrivateRoutes";
+import ErrorPage from "../pages/ErrorPage";
 
 
 const router = createBrowserRouter([
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home/>
+                element: <Home/>,
+                loader: () => fetch('http://localhost:3000/seaFoods')
             },
             {
                 path: "/login",
@@ -44,7 +46,8 @@ const router = createBrowserRouter([
                 path: "/blogs",
                 element: <Blogs/>
             }
-        ]
+        ],
+        errorElement: <ErrorPage/>
     },
     {
         path: '/dashboard',
