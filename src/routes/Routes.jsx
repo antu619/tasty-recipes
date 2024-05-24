@@ -10,6 +10,8 @@ import Register from "../pages/Register";
 import DashboardLayout from "../layouts/DashboardLayout";
 import PrivateRoutes from "./PrivateRoutes";
 import ErrorPage from "../pages/ErrorPage";
+import FoodDetails from "../pages/FoodDetails";
+import AllSeaFoods from "../components/AllSeaFoods";
 
 
 const router = createBrowserRouter([
@@ -21,6 +23,11 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <Home/>,
                 loader: () => fetch('http://localhost:3000/seaFoods')
+            },
+            {
+                path: "/seaFoods/:id",
+                element: <FoodDetails/>,
+                loader: ({params}) => fetch(`http://localhost:3000/seaFoods/${params.id}`)
             },
             {
                 path: "/login",
@@ -51,7 +58,13 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <PrivateRoutes><DashboardLayout/></PrivateRoutes>
+        element: <PrivateRoutes><DashboardLayout/></PrivateRoutes>,
+        children:[
+            {
+                path: '/dashboard/allSeaFoods',
+                element: <PrivateRoutes><AllSeaFoods /></PrivateRoutes>
+            }
+        ]
     }
 ])
 
