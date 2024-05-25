@@ -12,6 +12,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import ErrorPage from "../pages/ErrorPage";
 import FoodDetails from "../pages/FoodDetails";
 import AllSeaFoods from "../components/AllSeaFoods";
+import AddSeaFoods from "../components/AddSeaFoods";
 
 
 const router = createBrowserRouter([
@@ -63,7 +64,11 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/allSeaFoods',
                 element: <PrivateRoutes><AllSeaFoods /></PrivateRoutes>
-            }
+            },
+            {
+                path: '/dashboard/addSeaFoods',
+                element: <PrivateRoutes><AddSeaFoods /></PrivateRoutes>
+            },
         ]
     }
 ])

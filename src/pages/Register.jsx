@@ -2,9 +2,11 @@ import { Link, useNavigate } from "react-router-dom";
 import GoogleGithubLogin from "../components/GoogleGithubLogin";
 import { useAuthState, useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.config";
+import { useEffect } from "react";
 
 const Register = () => {
   const navigate = useNavigate();
+
 
   // firebase-hook
   const [user] = useAuthState(auth);
@@ -21,9 +23,11 @@ const Register = () => {
     createUserWithEmailAndPassword(email, password);
   };
 
-  if(user){
-    navigate("/");
+  useEffect( () => {
+    if(user){
+    navigate('/')
   }
+  } , [navigate, user])
 
 console.log(user, loading, error, user2)
 

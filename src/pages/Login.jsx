@@ -5,11 +5,13 @@ import {
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.config";
+import { useEffect } from "react";
 
 const Login = () => {
   const location = useLocation();
-  console.log(location)
   const navigate = useNavigate();
+
+  const from = location?.state || "/";
 
   // firebase-hook
   const [user] = useAuthState(auth);
@@ -29,9 +31,11 @@ const Login = () => {
     
   };
 
-  if(user){
-    navigate(location?.state ? location.state : "/")
-  }
+  useEffect(() => {
+    if(user){
+      navigate(from, {replace: true});
+    }
+  }, [from, navigate, user])
 
   return (
     <div
