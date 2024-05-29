@@ -14,6 +14,7 @@ import FoodDetails from "../pages/FoodDetails";
 import AllSeaFoods from "../pages/dashboard/AllSeaFoods";
 import AddSeaFoods from "../pages/dashboard/AddSeaFoods";
 import EditSeaFood from "../pages/dashboard/EditSeaFood";
+import Dashboard from "../pages/dashboard/Dashboard";
 
 
 const router = createBrowserRouter([
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <PrivateRoutes><DashboardLayout/></PrivateRoutes>,
         children:[
+            {
+                path: '/dashboard',
+                element: <PrivateRoutes><Dashboard/></PrivateRoutes>
+            },
             {
                 path: '/dashboard/allSeaFoods',
                 element: <PrivateRoutes><AllSeaFoods /></PrivateRoutes>

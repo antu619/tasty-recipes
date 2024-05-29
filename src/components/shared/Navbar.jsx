@@ -72,7 +72,7 @@ const Navbar = () => {
       {user?.uid ? (
           <div className="flex items-center gap-2">
             {user.photoURL ? (
-              <img className="w-12 border-2 rounded-full" src={user?.photoURL} />
+              <img className="w-12 border-2 rounded-full" src={user.photoURL} />
             ) : (
               <div className="avatar placeholder">
               <div className="bg-neutral text-neutral-content border-2 rounded-full w-12">
