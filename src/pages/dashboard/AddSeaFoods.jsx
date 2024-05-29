@@ -1,6 +1,4 @@
-import toast, { Toaster } from 'react-hot-toast';
-
-
+import toast from 'react-hot-toast';
 
 const AddSeaFoods = () => {
 
@@ -98,7 +96,6 @@ const AddSeaFoods = () => {
           </div>
         </form>
       </div>
-      <Toaster />
     </div>
   );
 };

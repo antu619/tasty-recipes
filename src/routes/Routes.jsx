@@ -11,8 +11,8 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import PrivateRoutes from "./PrivateRoutes";
 import ErrorPage from "../pages/ErrorPage";
 import FoodDetails from "../pages/FoodDetails";
-import AllSeaFoods from "../components/AllSeaFoods";
-import AddSeaFoods from "../components/AddSeaFoods";
+import AllSeaFoods from "../pages/dashboard/AllSeaFoods";
+import AddSeaFoods from "../pages/dashboard/AddSeaFoods";
 
 
 const router = createBrowserRouter([
