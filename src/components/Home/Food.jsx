@@ -13,7 +13,7 @@ const Food = ({seaFood}) => {
         <h2 className="card-title">{name}</h2>
         <div className="card-actions items-center gap-5 justify-end">
         <p className="font-semibold text-gray-500">${price}</p>
-      <button className="btn btn-neutral"><Link className="flex gap-2 items-center" to={`/seaFoods/${id}`}>Details <FaArrowRight /></Link></button>
+      <Link className="btn btn-neutral flex gap-2 items-center" to={`/seaFoods/${id}`}>Details <FaArrowRight /></Link>
     </div>
       </div>
     </div>

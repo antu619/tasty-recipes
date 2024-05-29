@@ -1,75 +1,74 @@
 {
-    "seaFoods": [
-        {
-            "id": "1",
-            "name": "Salmon",
-            "imgUrl": "https://i.ibb.co/Y0ykZN1/pexels-dana-tentis-118658-725991.jpg",
-            "price": 15.99,
-            "description": "Salmon is rich and flavorful, known for its vibrant color and high omega-3 content. It's perfect for grilling, baking, or pan-searing. Enjoy it as a main dish, in salads, or sushi."
-        },
-        {
-            "id": "2",
-            "name": "Shrimp",
-            "imgUrl": "https://i.ibb.co/V3PGhKk/Shrimp.jpg",
-            "price": 12.99,
-            "description": "Shrimp are juicy and tender with a slightly sweet flavor. They're versatile and can be used in pasta, stir-fries, salads, or simply grilled. Quick to cook and loved by many."
-        },
-        {
-            "id": "3",
-            "name": "Lobster",
-            "imgUrl": "https://i.ibb.co/ZcTDZdD/Lobster.jpg",
-            "price": 25.99,
-            "description": "Lobster is delicate and sweet, making it a luxurious seafood choice. Often enjoyed steamed or grilled, it's perfect for special occasions. Serve with butter or in a rich lobster roll."
-        },
-        {
-            "id": "4",
-            "name": "Tuna",
-            "imgUrl": "https://i.ibb.co/H73dMYd/Tuna.jpg",
-            "price": 18.99,
-            "description": "Tuna is firm and meaty, ideal for steaks or sashimi. Its mild flavor and dense texture make it suitable for grilling, searing, or eating raw in sushi and poke bowls."
-        },
-        {
-            "id": "5",
-            "name": "Crab",
-            "imgUrl": "https://i.ibb.co/3zwDvxQ/Crab.jpg",
-            "price": 20.99,
-            "description": "Crab is sweet and succulent, perfect for various dishes like salads, soups, and crab cakes. Its delicate flavor is best enjoyed with minimal seasoning to let its natural taste shine."
-        },
-        {
-            "id": "6",
-            "name": "Oysters",
-            "imgUrl": "https://i.ibb.co/C1St1NT/Oysters.jpg",
-            "price": 14.99,
-            "description": "Oysters are briny and fresh, often enjoyed raw on the half shell or grilled. They're a delicacy known for their unique flavor, which varies depending on their origin."
-        },
-        {
-            "id": "7",
-            "name": "Scallops",
-            "imgUrl": "https://i.ibb.co/BtdVg9c/Scallops.jpg",
-            "price": 22.99,
-            "description": "Scallops are sweet and tender, perfect for searing or baking. They have a delicate texture and mild flavor, making them a gourmet choice for elegant meals."
-        },
-        {
-            "id": "8",
-            "name": "Clams",
-            "imgUrl": "https://i.ibb.co/DgDTk7v/Clams.jpg",
-            "price": 13.99,
-            "description": "Clams are briny and chewy, excellent in chowders, pasta dishes, or steamed with garlic and butter. Their robust sea flavor adds depth to many seafood recipes."
-        },
-        {
-            "id": "9",
-            "name": "Mussels",
-            "imgUrl": "https://i.ibb.co/dbJsbjZ/Mussels.jpg",
-            "price": 11.99,
-            "description": "Mussels are mild and tender, often steamed and served in a flavorful broth. They're quick to prepare and perfect as an appetizer or main dish with crusty bread."
-        },
-        {
-            "id": "10",
-            "name": "Octopus",
-            "imgUrl": "https://i.ibb.co/gvY7Cg8/Octopus.jpg",
-            "price": 17.99,
-            "description": "Octopus is firm and flavorful, ideal for grilling or adding to salads. Its unique texture and rich taste make it a standout in Mediterranean and Asian cuisines."
-        }
-    ]
-    
-  }
+  "seaFoods": [
+    {
+      "id": "1",
+      "name": "Salmon",
+      "imgUrl": "https://i.ibb.co/Y0ykZN1/pexels-dana-tentis-118658-725991.jpg",
+      "price": 15.99,
+      "description": "Salmon is rich and flavorful, known for its vibrant color and high omega-3 content. It's perfect for grilling, baking, or pan-searing. Enjoy it as a main dish, in salads, or sushi."
+    },
+    {
+      "id": "2",
+      "name": "Shrimp",
+      "imgUrl": "https://i.ibb.co/V3PGhKk/Shrimp.jpg",
+      "price": 12.99,
+      "description": "Shrimp are juicy and tender with a slightly sweet flavor. They're versatile and can be used in pasta, stir-fries, salads, or simply grilled. Quick to cook and loved by many."
+    },
+    {
+      "id": "3",
+      "name": "Lobster",
+      "imgUrl": "https://i.ibb.co/ZcTDZdD/Lobster.jpg",
+      "price": 25.99,
+      "description": "Lobster is delicate and sweet, making it a luxurious seafood choice. Often enjoyed steamed or grilled, it's perfect for special occasions. Serve with butter or in a rich lobster roll."
+    },
+    {
+      "id": "4",
+      "name": "Tuna",
+      "imgUrl": "https://i.ibb.co/H73dMYd/Tuna.jpg",
+      "price": 18.99,
+      "description": "Tuna is firm and meaty, ideal for steaks or sashimi. Its mild flavor and dense texture make it suitable for grilling, searing, or eating raw in sushi and poke bowls."
+    },
+    {
+      "id": "5",
+      "name": "Crab",
+      "imgUrl": "https://i.ibb.co/3zwDvxQ/Crab.jpg",
+      "price": 20.99,
+      "description": "Crab is sweet and succulent, perfect for various dishes like salads, soups, and crab cakes. Its delicate flavor is best enjoyed with minimal seasoning to let its natural taste shine."
+    },
+    {
+      "id": "6",
+      "name": "Oysters",
+      "imgUrl": "https://i.ibb.co/C1St1NT/Oysters.jpg",
+      "price": 14.99,
+      "description": "Oysters are briny and fresh, often enjoyed raw on the half shell or grilled. They're a delicacy known for their unique flavor, which varies depending on their origin."
+    },
+    {
+      "id": "7",
+      "name": "Scallops",
+      "imgUrl": "https://i.ibb.co/BtdVg9c/Scallops.jpg",
+      "price": 22.99,
+      "description": "Scallops are sweet and tender, perfect for searing or baking. They have a delicate texture and mild flavor, making them a gourmet choice for elegant meals."
+    },
+    {
+      "id": "8",
+      "name": "Clams",
+      "imgUrl": "https://i.ibb.co/DgDTk7v/Clams.jpg",
+      "price": 13.99,
+      "description": "Clams are briny and chewy, excellent in chowders, pasta dishes, or steamed with garlic and butter. Their robust sea flavor adds depth to many seafood recipes."
+    },
+    {
+      "id": "9",
+      "name": "Mussels",
+      "imgUrl": "https://i.ibb.co/dbJsbjZ/Mussels.jpg",
+      "price": 11.99,
+      "description": "Mussels are mild and tender, often steamed and served in a flavorful broth. They're quick to prepare and perfect as an appetizer or main dish with crusty bread."
+    },
+    {
+      "id": "10",
+      "name": "Octopus",
+      "imgUrl": "https://i.ibb.co/gvY7Cg8/Octopus.jpg",
+      "price": 17.99,
+      "description": "Octopus is firm and flavorful, ideal for grilling or adding to salads. Its unique texture and rich taste make it a standout in Mediterranean and Asian cuisines."
+    }
+  ]
+}
