@@ -13,6 +13,7 @@ import ErrorPage from "../pages/ErrorPage";
 import FoodDetails from "../pages/FoodDetails";
 import AllSeaFoods from "../pages/dashboard/AllSeaFoods";
 import AddSeaFoods from "../pages/dashboard/AddSeaFoods";
+import EditSeaFood from "../pages/dashboard/EditSeaFood";
 
 
 const router = createBrowserRouter([
@@ -67,6 +68,11 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/addSeaFoods',
                 element: <PrivateRoutes><AddSeaFoods /></PrivateRoutes>
+            },
+            {
+                path: '/dashboard/editSeaFoods/:id',
+                element: <PrivateRoutes><EditSeaFood /></PrivateRoutes>,
+                loader: ({params}) => fetch(`http://localhost:3000/seaFoods/${params.id}`)
             },
         ]
     }

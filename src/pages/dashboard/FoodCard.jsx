@@ -11,7 +11,10 @@ const FoodCard = ({seaFood, handleRemove}) => {
 
     // Delete Operation
     const handleDelete = async() => {
-        await fetch(`http://localhost:3000/seaFoods/${id}`, {
+        const alert = window.confirm(`Are you sure! You Want To Delete "${name}"`)
+
+        if(alert){
+            await fetch(`http://localhost:3000/seaFoods/${id}`, {
             method: "DELETE"
         })
         .then(res => res.json())
@@ -22,6 +25,7 @@ const FoodCard = ({seaFood, handleRemove}) => {
                 duration: 4000,
                 position: 'top-center',})
         })
+        }
     }
 
     return (
@@ -35,8 +39,8 @@ const FoodCard = ({seaFood, handleRemove}) => {
       </div>
       <div className="card-actions justify-between items-center p-4">
         <div className="flex gap-2">
-        <button onClick={handleDelete} className="btn btn-error text-white text-xl"><RiDeleteBin6Line /></button>
-        <Link className="btn btn-primary text-white text-xl"><CiEdit /></Link>
+        <button onClick={handleDelete} className="btn btn-error btn-outline text-xl"><RiDeleteBin6Line /></button>
+        <Link to={`/dashboard/editSeaFoods/${id}`} className="btn btn-info btn-outline text-xl"><CiEdit /></Link>
         </div>
       <Link className="btn btn-neutral flex gap-2 items-center" to={`/seaFoods/${id}`}>Details <FaArrowRight /></Link>
       </div>

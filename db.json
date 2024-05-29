@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Salmon",
       "imgUrl": "https://i.ibb.co/Y0ykZN1/pexels-dana-tentis-118658-725991.jpg",
-      "price": 15.99,
+      "price": "15.99",
       "description": "Salmon is rich and flavorful, known for its vibrant color and high omega-3 content. It's perfect for grilling, baking, or pan-searing. Enjoy it as a main dish, in salads, or sushi."
     },
     {
