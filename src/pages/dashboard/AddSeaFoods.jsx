@@ -6,15 +6,14 @@ const AddSeaFoods = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    const id = form.id.value;
     const name = form.name.value;
     const imgUrl = form.imgUrl.value;
     const price = form.price.value;
     const description = form.description.value;
-    const foodData = { id, name, imgUrl, price, description };
+    const foodData = { name, imgUrl, price, description };
     console.log(foodData);
 
-    await fetch("http://localhost:3000/seaFoods", {
+    await fetch("http://localhost:5000/seaFoods", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -53,14 +52,7 @@ const AddSeaFoods = () => {
               required
             />
           </div>
-          <div className="flex gap-2 mb-2">
-            <input
-              type="text"
-              name="id"
-              placeholder="id"
-              className="input input-bordered w-full"
-              required
-            />
+          <div className="form-control mb-2">
             <input
               type="text"
               name="price"

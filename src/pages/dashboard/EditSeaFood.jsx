@@ -6,7 +6,6 @@ const EditSeaFood = () => {
   const seaFood = useLoaderData();
 
   const [name, setName] = useState(seaFood.name);
-  const [id, setId] = useState(seaFood.id);
   const [price, setPrice] = useState(seaFood.price);
   const [description, setDescription] = useState(seaFood.description);
   const [imgUrl, setImgUrl] = useState(seaFood.imgUrl);
@@ -14,19 +13,18 @@ const EditSeaFood = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     const form = e.target;
-    const id = form.id.value;
     const name = form.name.value;
     const imgUrl = form.imgUrl.value;
     const price = form.price.value;
     const description = form.description.value;
-    const foodData = { id, name, imgUrl, price, description };
+    const foodData = { name, imgUrl, price, description };
 
     const alert = window.confirm(
       `Are you sure? You want to update "${seaFood.name}" recipe.`
     );
 
     if (alert) {
-      await fetch(`http://localhost:3000/seaFoods/${seaFood.id}`, {
+      await fetch(`http://localhost:5000/seaFoods/${seaFood._id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
@@ -68,19 +66,7 @@ const EditSeaFood = () => {
               />
             </label>
           </div>
-          <div className="flex gap-2 mb-2">
-            <label className="input input-bordered flex items-center gap-2 w-full">
-              ID:
-              <input
-                type="text"
-                name="id"
-                placeholder="id"
-                className="grow"
-                value={id}
-                onChange={(e) => setId(e.target.value)}
-                required
-              />
-            </label>
+          <div className="form-control mb-2">
             <label className="input input-bordered flex items-center gap-2 w-full">
               Price:
               <input

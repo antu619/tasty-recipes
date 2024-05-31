@@ -7,7 +7,7 @@ const SeaFoods = () => {
     const [seaFoods, setSeaFoods] = useState([]);
 
     useEffect( () => {
-        fetch(`http://localhost:3000/seaFoods`)
+        fetch(`http://localhost:5000/seaFoods`)
         .then(res => res.json())
         .then(data => setSeaFoods(data))
     }, [])
@@ -17,7 +17,7 @@ const SeaFoods = () => {
            <h2 className="text-3xl text-center font-semibold mb-16">Our Sea Foods</h2>
            <div className="grid lg:grid-cols-3 gap-5 lg:px-20 px-5">
             {
-                seaFoods?.slice(0,6).map(seaFood => <Food key={seaFood.id} seaFood={seaFood} />)
+                seaFoods?.slice(0,6).map(seaFood => <Food key={seaFood._id} seaFood={seaFood} />)
             }
            </div>
         </div>

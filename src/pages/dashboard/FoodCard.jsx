@@ -7,20 +7,20 @@ import { Link } from "react-router-dom";
 
 
 const FoodCard = ({seaFood, handleRemove}) => {
-    const {id, name, imgUrl, price} = seaFood;
+    const {_id, name, imgUrl, price} = seaFood;
 
     // Delete Operation
     const handleDelete = async() => {
         const alert = window.confirm(`Are you sure! You Want To Delete "${name}"`)
 
         if(alert){
-            await fetch(`http://localhost:3000/seaFoods/${id}`, {
+            await fetch(`http://localhost:5000/seaFoods/${_id}`, {
             method: "DELETE"
         })
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            handleRemove(id)
+            handleRemove(_id)
             toast.success('Successfully deleted a sea food recipe', {
                 duration: 4000,
                 position: 'top-center',})
@@ -40,9 +40,9 @@ const FoodCard = ({seaFood, handleRemove}) => {
       <div className="card-actions justify-between items-center p-4">
         <div className="flex gap-2">
         <button onClick={handleDelete} className="btn btn-error btn-outline text-xl"><RiDeleteBin6Line /></button>
-        <Link to={`/dashboard/editSeaFoods/${id}`} className="btn btn-info btn-outline text-xl"><CiEdit /></Link>
+        <Link to={`/dashboard/editSeaFoods/${_id}`} className="btn btn-info btn-outline text-xl"><CiEdit /></Link>
         </div>
-      <Link className="btn btn-neutral flex gap-2 items-center" to={`/seaFoods/${id}`}>Details <FaArrowRight /></Link>
+      <Link className="btn btn-neutral flex gap-2 items-center" to={`/seaFoods/${_id}`}>Details <FaArrowRight /></Link>
       </div>
     </div>
     );
