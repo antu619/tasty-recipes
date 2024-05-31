@@ -33,12 +33,12 @@ Recently, I explored `react-firebase-hooks` and CRUD Operation created a project
 - **Express.js**: A minimal and flexible Node.js web application framework.
 - **MongoDB**: A NoSQL database used for storing recipe data.
 
-- ## Links
+## Links
 
-Client Site Live [Link](https://tasty-recipes-b8ce6.web.app/)
-Server Site Live [Link](https://tasty-recipes-server-iota.vercel.app)
+- Client Site Live [Link](https://tasty-recipes-b8ce6.web.app/)
+- Server Site Live [Link](https://tasty-recipes-server-iota.vercel.app)
 
 
 ## Contact
 
-E-mail: antu.das.619@gmail.com
+- E-mail: antu.das.619@gmail.com
