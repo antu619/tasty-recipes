@@ -7,7 +7,7 @@ const SeaFoods = () => {
     const [seaFoods, setSeaFoods] = useState([]);
 
     useEffect( () => {
-        fetch(`http://localhost:5000/seaFoods`)
+        fetch(`https://tasty-recipes-server-iota.vercel.app/seaFoods`)
         .then(res => res.json())
         .then(data => setSeaFoods(data))
     }, [])

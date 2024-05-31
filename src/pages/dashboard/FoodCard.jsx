@@ -14,7 +14,7 @@ const FoodCard = ({seaFood, handleRemove}) => {
         const alert = window.confirm(`Are you sure! You Want To Delete "${name}"`)
 
         if(alert){
-            await fetch(`http://localhost:5000/seaFoods/${_id}`, {
+            await fetch(`https://tasty-recipes-server-iota.vercel.app/seaFoods/${_id}`, {
             method: "DELETE"
         })
         .then(res => res.json())

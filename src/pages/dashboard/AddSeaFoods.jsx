@@ -13,7 +13,7 @@ const AddSeaFoods = () => {
     const foodData = { name, imgUrl, price, description };
     console.log(foodData);
 
-    await fetch("http://localhost:5000/seaFoods", {
+    await fetch("https://tasty-recipes-server-iota.vercel.app/seaFoods", {
       method: "POST",
       headers: {
         "content-type": "application/json",

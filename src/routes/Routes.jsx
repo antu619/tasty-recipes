@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             {
                 path: "/seaFoods/:id",
                 element: <FoodDetails/>,
-                loader: ({params}) => fetch(`http://localhost:5000/seaFoods/${params.id}`)
+                loader: ({params}) => fetch(`https://tasty-recipes-server-iota.vercel.app/seaFoods/${params.id}`)
             },
             {
                 path: "/login",
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/editSeaFoods/:id',
                 element: <PrivateRoutes><EditSeaFood /></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/seaFoods/${params.id}`)
+                loader: ({params}) => fetch(`https://tasty-recipes-server-iota.vercel.app/seaFoods/${params.id}`)
             },
         ]
     }
