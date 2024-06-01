@@ -40,7 +40,9 @@ const Register = () => {
           .then((data) => {
             console.log(data)
             navigate('/')
-            toast.success(`Welcome ${name}`)
+            toast.success(`Welcome ${name}`, {
+              duration: 4000,
+              position: 'top-right',})
           });
       }
   })

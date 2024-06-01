@@ -15,6 +15,7 @@ import AllSeaFoods from "../pages/dashboard/AllSeaFoods";
 import AddSeaFoods from "../pages/dashboard/AddSeaFoods";
 import EditSeaFood from "../pages/dashboard/EditSeaFood";
 import Dashboard from "../pages/dashboard/Dashboard";
+import EditProfile from "../pages/dashboard/EditProfile";
 
 
 const router = createBrowserRouter([
@@ -67,15 +68,20 @@ const router = createBrowserRouter([
                 element: <PrivateRoutes><Dashboard/></PrivateRoutes>
             },
             {
-                path: '/dashboard/allSeaFoods',
+                path: 'profile/edit/:id',
+                element: <PrivateRoutes><EditProfile/></PrivateRoutes>,
+                loader: ({params}) => fetch(`http://localhost:5000/user/profile/${params.id}`)
+            },
+            {
+                path: 'allSeaFoods',
                 element: <PrivateRoutes><AllSeaFoods /></PrivateRoutes>
             },
             {
-                path: '/dashboard/addSeaFoods',
+                path: 'addSeaFoods',
                 element: <PrivateRoutes><AddSeaFoods /></PrivateRoutes>
             },
             {
-                path: '/dashboard/editSeaFoods/:id',
+                path: 'editSeaFoods/:id',
                 element: <PrivateRoutes><EditSeaFood /></PrivateRoutes>,
                 loader: ({params}) => fetch(`https://tasty-recipes-server-iota.vercel.app/seaFoods/${params.id}`)
             },

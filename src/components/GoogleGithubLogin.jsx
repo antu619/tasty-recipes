@@ -1,5 +1,6 @@
 import { useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.config";
+import toast from "react-hot-toast";
 
 
 const GoogleGithubLogin = () => {
@@ -12,6 +13,9 @@ const GoogleGithubLogin = () => {
         signInWithGoogle()
         .then(data => {
             console.log(data)
+            toast.success(`Welcome ${data.user.displayName}`, {
+                duration: 4000,
+                position: 'top-right',})
             if(data?.user?.email){
                 const userInfo ={
                     name: data?.user?.displayName,
@@ -25,14 +29,40 @@ const GoogleGithubLogin = () => {
                     body: JSON.stringify(userInfo)
                 })
                 .then((res) => res.json())
-                .then((data) => console.log(data));
+                .then((data) => {
+                    console.log(data)
+                    
+                });
             }
         })
     };
 
     const handleGithubLogin = () => {
         signInWithGithub()
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+            toast.success(`Welcome ${data.user.displayName}`, {
+                duration: 4000,
+                position: 'top-right',})
+                if(data?.user?.uid){
+                    const userInfo ={
+                        name: data?.user?.displayName,
+                        email: data?.user?.email,
+                    }
+                    fetch('http://localhost:5000/user', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json' 
+                        },
+                        body: JSON.stringify(userInfo)
+                    })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data)
+                        
+                    });
+                }
+        })
     }
 
     console.log( user, loading, error,  userGit, loadingGit, errorGit)

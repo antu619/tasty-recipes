@@ -5,6 +5,7 @@ import {
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.config";
+import toast from "react-hot-toast";
 import { useEffect } from "react";
 
 const Login = () => {
@@ -27,7 +28,13 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
-    signInWithEmailAndPassword(email, password);
+    signInWithEmailAndPassword(email, password)
+    .then(data => {
+      console.log(data)
+      toast.success(`Welcome ${data.user.displayName ? data.user.displayName : "to Tasty Recipe"}`, {
+        duration: 4000,
+        position: 'top-right',})
+    })
     
   };
 
@@ -36,6 +43,7 @@ const Login = () => {
       navigate(from, {replace: true});
     }
   }, [from, navigate, user])
+
 
   return (
     <div
