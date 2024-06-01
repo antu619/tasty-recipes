@@ -16,7 +16,7 @@ const AddSeaFoods = () => {
     await fetch("https://tasty-recipes-server-iota.vercel.app/seaFoods", {
       method: "POST",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(foodData),
     })

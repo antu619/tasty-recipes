@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import GoogleGithubLogin from "../components/GoogleGithubLogin";
 import { useAuthState, useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.config";
-import { useEffect } from "react";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -17,17 +17,34 @@ const Register = () => {
     e.preventDefault();
 
     const form = e.target;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password)
-    createUserWithEmailAndPassword(email, password);
+    createUserWithEmailAndPassword(email, password)
+    .then((data) => {
+      console.log(data)
+      if(data?.user?.email){
+          const userInfo ={
+              name: name,
+              email: data?.user?.email,
+          }
+          fetch('http://localhost:5000/user', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json' 
+              },
+              body: JSON.stringify(userInfo)
+          })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data)
+            navigate('/')
+            toast.success(`Welcome ${name}`)
+          });
+      }
+  })
   };
-
-  useEffect( () => {
-    if(user){
-    navigate('/')
-  }
-  } , [navigate, user])
 
 console.log(user, loading, error, user2)
 
@@ -48,6 +65,7 @@ console.log(user, loading, error, user2)
           <div className="form-control mb-2">
             <input
               type="text"
+              name="name"
               placeholder="full name"
               className="input input-bordered w-full"
               required

@@ -27,7 +27,7 @@ const EditSeaFood = () => {
       await fetch(`https://tasty-recipes-server-iota.vercel.app/seaFoods/${seaFood._id}`, {
         method: "PATCH",
         headers: {
-          "content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(foodData),
       })
