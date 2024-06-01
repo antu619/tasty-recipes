@@ -1,10 +1,10 @@
 # Tasty Recipes! 🍲
 
-Recently, I explored `react-firebase-hooks` and created a project named "Tasty Recipes" to practice my skills. This project was also part of my programming course on Firebase Authentication.
+Recently, I explored `react-firebase-hooks` and CRUD Operation created a project named "Tasty Recipes" to practice my skills. This project was also part of my programming course on Firebase Authentication.
 
 ## Project Overview
 
-"Tasty Recipes" features a delicious homepage with various sections such as "Our Food Categories", "Our Sea Foods", and a "Subscribe" section. The project leverages Firebase and `react-firebase-hooks` for authentication and data handling.
+"Tasty Recipes" features a delicious homepage with various sections such as "Our Food Categories", "Our Sea Foods", and a "Subscribe" section. The project leverages Firebase and `react-firebase-hooks` for authentication and data handling with CRUD Operation.
 
 ## Features
 
@@ -13,8 +13,12 @@ Recently, I explored `react-firebase-hooks` and created a project named "Tasty R
 - **Auto Redirect**: After logging in, users are redirected to the page they intended to visit.
 - **Responsive Homepage**: The homepage includes food categories, a seafood section, and a subscribe section, all designed to be responsive.
 - **Dynamic Homepage**: The homepage includes food categories, a seafood section, and a subscribe section.
+- **Dashboard Panel**: Logged-in users have access to a dashboard where they can view their information on the User Info page.
+- **CRUD Operations**: Logged-in users can add, edit, and delete seafood recipes.
 
 ## Technologies Used
+
+### Frontend
 
 - **React.js**: A JavaScript library for building user interfaces.
 - **Firebase**: Used for authentication and data management.
@@ -23,11 +27,18 @@ Recently, I explored `react-firebase-hooks` and created a project named "Tasty R
 - **Tailwind CSS**: A utility-first CSS framework for styling.
 - **Daisy UI**: A component library for Tailwind CSS.
 
-- ## Links
+### Backend
 
-[Live](https://tasty-recipes-b8ce6.web.app/) Link
+- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Express.js**: A minimal and flexible Node.js web application framework.
+- **MongoDB**: A NoSQL database used for storing recipe data.
+
+## Links
+
+- Client Site Live [Link](https://tasty-recipes-b8ce6.web.app/)
+- Server Site Live [Link](https://tasty-recipes-server-iota.vercel.app)
 
 
 ## Contact
 
-E-mail: antu.das.619@gmail.com
+- E-mail: antu.das.619@gmail.com
