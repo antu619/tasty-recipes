@@ -34,6 +34,7 @@ const Login = () => {
       toast.success(`Welcome ${data.user.displayName ? data.user.displayName : "to Tasty Recipe"}`, {
         duration: 4000,
         position: 'top-right',})
+        localStorage.setItem('token', data?.token)
     })
     
   };

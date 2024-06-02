@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 const EditSeaFood = () => {
+  const token = localStorage.getItem('token');
   const seaFood = useLoaderData();
 
   const [name, setName] = useState(seaFood.name);
@@ -28,6 +29,7 @@ const EditSeaFood = () => {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
+          authorization: `bearer ${token}`
         },
         body: JSON.stringify(foodData),
       })

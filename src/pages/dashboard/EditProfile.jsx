@@ -2,6 +2,7 @@ import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 const EditProfile = () => {
+  const token = localStorage.getItem('token');
   const data = useLoaderData();
   console.log(data);
 
@@ -23,6 +24,7 @@ const EditProfile = () => {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
+            authorization: `bearer ${token}`
         },
         body: JSON.stringify(userData)
     })

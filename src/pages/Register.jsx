@@ -1,11 +1,15 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleGithubLogin from "../components/GoogleGithubLogin";
 import { useAuthState, useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.config";
 import toast from "react-hot-toast";
+import { useEffect } from "react";
 
 const Register = () => {
+  const location = useLocation();
   const navigate = useNavigate();
+
+  const from = location?.state || "/";
 
 
   // firebase-hook
@@ -39,7 +43,6 @@ const Register = () => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data)
-            navigate('/')
             toast.success(`Welcome ${name}`, {
               duration: 4000,
               position: 'top-right',})
@@ -49,6 +52,13 @@ const Register = () => {
   };
 
 console.log(user, loading, error, user2)
+
+
+useEffect(() => {
+  if(user){
+    navigate(from, {replace: true});
+  }
+}, [from, navigate, user])
 
 
   return (
