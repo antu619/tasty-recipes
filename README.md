@@ -14,6 +14,7 @@ Recently, I explored `react-firebase-hooks` and CRUD Operation created a project
 - **Responsive Homepage**: The homepage includes food categories, a seafood section, and a subscribe section, all designed to be responsive.
 - **Dynamic Homepage**: The homepage includes food categories, a seafood section, and a subscribe section.
 - **Dashboard Panel**: Logged-in users have access to a dashboard where they can view their information on the User Info page.
+- **User Information Management**: After logging in, user data is saved into the database. Users can view and edit their information.
 - **CRUD Operations**: Logged-in users can add, edit, and delete seafood recipes.
 
 ## Technologies Used
