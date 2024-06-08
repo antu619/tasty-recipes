@@ -34,6 +34,14 @@ Recently, I explored `react-firebase-hooks` and CRUD Operation created a project
 - **Express.js**: A minimal and flexible Node.js web application framework.
 - **MongoDB**: A NoSQL database used for storing recipe data.
 
+## Setup Instructions
+- Clone the repository.
+- Navigate to the project directory.
+- Install dependencies using `npm install`.
+- Set up Firebase for authentication.
+- Set up MongoDB for database operations.
+- Run the frontend and backend servers using `npm run dev`.
+
 ## Links
 
 - Client Site Live [Link](https://tasty-recipes-b8ce6.web.app/)
